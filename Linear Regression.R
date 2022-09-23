@@ -1,0 +1,16 @@
+install.packages('readxl')
+library('readxl')
+ads<-read.csv('D:\\R programs\\Advertising.csv')
+View(ads)
+nrow(ads)
+ncol(ads)
+colnames(ads)
+tv<-ads$tv
+sales<-ads$sales
+plot(tv,sales)
+model<-lm(sales~tv)
+summary(model)
+attributes(model)
+coefficients(model)
+coef(model)
+abline(model)
